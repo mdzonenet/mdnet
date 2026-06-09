@@ -1,1 +1,292 @@
-// File baru dibuat dari MD Zone
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#020617" id="metaThemeColor">
+    
+    <title>MODORA - Premium Mod Request</title>
+    <meta name="description" content="Submit a request for modified applications or games on MODORA.">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/nixy-pro/1@main/random/2026-02-07T14-36-29-180Z-IMG_20260207_212929_010.jpg" type="image/png">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('modora_theme');
+        if(savedTheme === 'light') { 
+            document.documentElement.classList.add('light-mode'); 
+            document.getElementById('metaThemeColor').setAttribute('content', '#f8fafc');
+        }
+    </script>
+
+    <style>
+        /* --- CONFIG & VARIABLES --- */
+        :root {
+            --bg-base: #020617;
+            --bg-grid: rgba(255, 255, 255, 0.02);
+            --card-bg: rgba(15, 23, 42, 0.6);
+            --input-bg: rgba(255, 255, 255, 0.03);
+            --input-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #3b82f6;
+            --primary-glow: rgba(59, 130, 246, 0.4);
+            --secondary: #6366f1;
+            --accent: #10b981;
+            --card-border: rgba(255, 255, 255, 0.1);
+            --shadow-lg: 0 30px 60px rgba(0, 0, 0, 0.4);
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+            --glass-blur: blur(24px);
+        }
+
+        html.light-mode {
+            --bg-base: #f8fafc;
+            --bg-grid: rgba(0, 0, 0, 0.03);
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --input-bg: rgba(0, 0, 0, 0.02);
+            --input-border: rgba(0, 0, 0, 0.1);
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --card-border: rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 30px 60px rgba(37, 99, 235, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-main); outline: none; -webkit-tap-highlight-color: transparent; }
+        
+        body { 
+            width: 100%; min-height: 100vh; overflow-x: hidden; 
+            background-color: var(--bg-base); color: var(--text-main);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            position: relative; transition: background-color 0.5s ease;
+        }
+
+        /* --- ANIMATED BACKGROUND (BLOBS & GRID) --- */
+        .bg-grid { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-image: linear-gradient(var(--bg-grid) 1px, transparent 1px), linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px); background-size: 30px 30px; z-index: -2; }
+        .blob-1, .blob-2 { position: fixed; border-radius: 50%; filter: blur(90px); z-index: -1; animation: floatBlob 15s infinite alternate ease-in-out; opacity: 0.5; }
+        .blob-1 { width: 400px; height: 400px; background: var(--primary); top: -10%; left: -10%; }
+        .blob-2 { width: 350px; height: 350px; background: var(--secondary); bottom: -10%; right: -5%; animation-delay: -5s; }
+        @keyframes floatBlob { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(100px, 50px) scale(1.2); } 100% { transform: translate(-50px, 100px) scale(0.8); } }
+
+        /* --- FLOATING NAVBAR --- */
+        .nav-pill {
+            position: absolute; top: 30px; left: 50%; transform: translateX(-50%);
+            background: var(--card-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--card-border); border-radius: 50px;
+            padding: 8px 12px; display: flex; align-items: center; gap: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 100;
+        }
+        .nav-btn { width: 40px; height: 40px; border-radius: 50%; background: var(--input-bg); color: var(--text-main); display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; border: 1px solid var(--input-border); }
+        .nav-btn:hover { background: var(--primary); color: white; border-color: var(--primary); transform: scale(1.05); }
+        .nav-title { font-weight: 800; font-size: 16px; background: linear-gradient(90deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 0.5px; padding: 0 10px; }
+
+        /* --- MAIN CARD (3D GLASSMORPHISM) --- */
+        #app-container { 
+            width: 100%; max-width: 500px; padding: 0 20px; z-index: 10;
+            animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            margin-top: 80px; margin-bottom: 40px;
+        }
+        @keyframes slideUpFade { 0% { opacity: 0; transform: translateY(40px) scale(0.95); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+
+        .glass-card {
+            background: var(--card-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+            border-radius: 32px; border: 1px solid var(--card-border);
+            padding: 40px 30px; box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.1);
+            position: relative; overflow: hidden;
+        }
+
+        .card-header { text-align: center; margin-bottom: 35px; }
+        .card-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 20px; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; color: white; box-shadow: 0 10px 25px var(--primary-glow); margin-bottom: 15px; transform: rotate(-5deg); transition: 0.3s; }
+        .glass-card:hover .card-icon { transform: rotate(0deg) scale(1.05); }
+        .card-title { font-size: 24px; font-weight: 800; color: var(--text-main); letter-spacing: -0.5px; margin-bottom: 5px; }
+        .card-subtitle { font-size: 14px; font-weight: 500; color: var(--text-muted); }
+
+        /* --- FLOATING LABEL INPUTS --- */
+        .input-group { position: relative; margin-bottom: 24px; }
+        .input-control {
+            width: 100%; padding: 22px 20px 10px;
+            background: var(--input-bg); border: 1px solid var(--input-border);
+            border-radius: 16px; color: var(--text-main); font-size: 15px; font-weight: 600;
+            transition: all 0.3s ease; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .input-control:focus { background: rgba(59, 130, 246, 0.05); border-color: var(--primary); box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1); }
+        textarea.input-control { min-height: 120px; resize: none; }
+        
+        .floating-label {
+            position: absolute; top: 16px; left: 20px;
+            color: var(--text-muted); font-size: 15px; font-weight: 500;
+            pointer-events: none; transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .input-control:focus ~ .floating-label, .input-control:valid ~ .floating-label {
+            transform: translateY(-8px) scale(0.85);
+            transform-origin: left top; color: var(--primary); font-weight: 700;
+        }
+
+        /* --- 3D BUTTON --- */
+        .btn-3d {
+            width: 100%; padding: 18px; border-radius: 16px; border: none;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white; font-size: 16px; font-weight: 800; letter-spacing: 0.5px;
+            cursor: pointer; position: relative;
+            box-shadow: 0 8px 0 #3730a3, 0 15px 20px rgba(0,0,0,0.3);
+            transition: all 0.15s ease; display: flex; align-items: center; justify-content: center; gap: 12px;
+            margin-top: 10px;
+        }
+        .btn-3d:active {
+            transform: translateY(8px);
+            box-shadow: 0 0 0 #3730a3, 0 5px 10px rgba(0,0,0,0.2);
+        }
+        .btn-3d:disabled { filter: grayscale(50%); cursor: not-allowed; transform: translateY(8px); box-shadow: 0 0 0 #3730a3; }
+
+        /* --- TOAST --- */
+        .toast-pill {
+            position: fixed; top: -100px; left: 50%; transform: translateX(-50%);
+            background: var(--card-bg); backdrop-filter: var(--glass-blur); border: 1px solid var(--accent);
+            color: var(--text-main); padding: 14px 24px; border-radius: 50px; font-weight: 700; font-size: 14px;
+            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.2); transition: top 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 3000; display: flex; align-items: center; gap: 10px; width: max-content;
+        }
+        .toast-pill.show { top: 40px; }
+        .toast-pill.error { border-color: #ef4444; box-shadow: 0 10px 40px rgba(239, 68, 68, 0.2); }
+        .toast-pill i { color: var(--accent); font-size: 18px; }
+        .toast-pill.error i { color: #ef4444; }
+
+        .footer { text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted); margin-top: 30px; letter-spacing: 0.5px; }
+    </style>
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+    <div class="blob-1"></div>
+    <div class="blob-2"></div>
+
+    <!-- Floating Navigation -->
+    <nav class="nav-pill">
+        <a href="../../" class="nav-btn" title="Back"><i class="fa-solid fa-arrow-left"></i></a>
+        <div class="nav-title">MODORA</div>
+        <a href="https://t.me/+mNTw4PpzWpBjOTVl" target="_blank" class="nav-btn" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+    </nav>
+
+    <!-- Main 3D Card -->
+    <main id="app-container">
+        <div class="glass-card">
+            
+            <div class="card-header">
+                <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h1 class="card-title">Request Mod</h1>
+                <p class="card-subtitle">Tell us what you need, we'll build it.</p>
+            </div>
+
+            <form id="modRequestForm" onsubmit="submitForm(event)">
+                
+                <div class="input-group">
+                    <input type="text" id="appName" class="input-control" required autocomplete="off">
+                    <label class="floating-label"><i class="fa-solid fa-gamepad"></i> App / Game Name</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="appVersion" class="input-control" required autocomplete="off">
+                    <label class="floating-label"><i class="fa-solid fa-tag"></i> Target Version</label>
+                </div>
+                
+                <div class="input-group">
+                    <textarea id="appFeatures" class="input-control" required autocomplete="off"></textarea>
+                    <label class="floating-label"><i class="fa-solid fa-bolt"></i> Requested Features</label>
+                </div>
+                
+                <button type="submit" id="submitBtn" class="btn-3d">
+                    <span>Submit Request</span> <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+
+        </div>
+        
+        <div class="footer">© <span id="year"></span> MODORA NETWORK</div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toastNotif" class="toast-pill">
+        <i class="fa-solid fa-circle-check"></i> <span id="toastMsg">Success!</span>
+    </div>
+
+    <script>
+        // ==========================================
+        // INITIALIZATION
+        // ==========================================
+        document.getElementById('year').innerText = new Date().getFullYear();
+
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toastNotif');
+            document.getElementById('toastMsg').innerText = message;
+            toast.className = `toast-pill ${isError ? 'error' : ''} show`;
+            if(isError) toast.querySelector('i').className = 'fa-solid fa-triangle-exclamation';
+            else toast.querySelector('i').className = 'fa-solid fa-circle-check';
+            
+            setTimeout(() => { toast.classList.remove('show'); }, 3500);
+        }
+
+        // ==========================================
+        // TELEGRAM BOT CREDENTIALS (Base64)
+        // ==========================================
+        // API: 8413530580:AAGtOUS7Gem6I0F6eVTdDSLI5xlFKcN8j8M
+        const _0xTkn = "ODQxMzUzMDU4MDpBQUd0T1VTN0dlbTZJMEY2ZVZUZERTTEk1eGxGS2NOOGo4TQ=="; 
+        // ID: -1003723668171
+        const _0xGrp = "LTEwMDM3MjM2NjgxNzE="; 
+
+        // ==========================================
+        // FORM SUBMISSION (WITH RICH EMOJIS FOR TELEGRAM)
+        // ==========================================
+        async function submitForm(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const name = document.getElementById('appName').value;
+            const version = document.getElementById('appVersion').value;
+            const features = document.getElementById('appFeatures').value;
+            
+            // Button Loading State
+            btn.disabled = true;
+            btn.innerHTML = '<span>Processing...</span> <i class="fa-solid fa-circle-notch fa-spin"></i>';
+
+            try {
+                const TELEGRAM_BOT_TOKEN = atob(_0xTkn);
+                const TELEGRAM_CHAT_ID = atob(_0xGrp);
+
+                // Get Current Time for log
+                const timeString = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+
+                // Rich Emoji Format exclusively for Telegram Payload
+                const textMsg = `🚀 *NEW MOD REQUEST* 🚀\n\n📱 *App / Game:* ${name}\n🏷️ *Target Version:* ${version}\n✨ *Features:* ${features}\n\n🕒 *Time:* ${timeString}`;
+                
+                const teleUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+                
+                const response = await fetch(teleUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        chat_id: TELEGRAM_CHAT_ID, 
+                        text: textMsg, 
+                        parse_mode: 'Markdown' 
+                    })
+                });
+
+                if (response.ok) {
+                    showToast('Request delivered perfectly!');
+                    document.getElementById('modRequestForm').reset();
+                } else {
+                    showToast('Failed to reach server.', true);
+                }
+            } catch (error) {
+                showToast('Network error encountered.', true);
+            } finally {
+                // Reset Button State
+                btn.disabled = false;
+                btn.innerHTML = '<span>Submit Request</span> <i class="fa-solid fa-paper-plane"></i>';
+            }
+        }
+    </script>
+</body>
+</html>
