@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <script>
+        (function() {
+            var userLang = navigator.language || navigator.userLanguage;
+            var targetLang = userLang.split('-')[0];
+            var currentLang = 'id';
+            if (targetLang !== currentLang) {
+                var cookieStr = "googtrans=/" + currentLang + "/" + targetLang;
+                document.cookie = cookieStr + "; path=/; domain=" + window.location.hostname;
+                document.cookie = cookieStr + "; path=/";
+            }
+        })();
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'id',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://pl29691904.effectivecpmnetwork.com/a0/13/0b/a0130b0465662fe49b41646684cc377f.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ibis Paint X MOD APK V14.0.4 - MODORA Official</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-body: #0f172a; --bg-card: #1e293b; --text-main: #f8fafc; --text-muted: #94a3b8;
+            --primary: #2563eb; --accent: #10b981; --border: #334155; --card-border: #334155;
+            --bg-glass: rgba(30, 41, 59, 0.85); --glass-blur: blur(12px);
+            --font-main: 'Plus Jakarta Sans', sans-serif; --header-h: 60px;
+            --search-bg: rgba(255, 255, 255, 0.05); --shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-main); outline: none; -webkit-tap-highlight-color: transparent; }
+        html, body { width: 100%; overflow-x: hidden; scroll-behavior: smooth; background-color: var(--bg-body); color: var(--text-main); }
+        body { padding-top: calc(var(--header-h) + 15px); padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 30px); }
+        
+        .skiptranslate, #goog-gt-tt, .goog-te-banner-frame { display: none !important; }
+        body { top: 0px !important; }
+        #google_translate_element { display: none !important; }
+
+        #mainView { width: 100%; padding: 0 24px; margin: 0 auto; max-width: 600px; animation: appEntry 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes appEntry { 0% { opacity: 0; transform: translateY(15px); } 100% { opacity: 1; transform: translateY(0); } }
+        
+        .ad-box { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 25px 0; overflow-x: auto; scrollbar-width: none; background: rgba(0,0,0,0.15); border-radius: 12px; padding: 10px 0; border: 1px dashed var(--border); }
+        .ad-box::-webkit-scrollbar { display: none; }
+
+        header { position: fixed; top: 0; left: 0; width: 100%; height: var(--header-h); padding: 0 24px; background: var(--bg-glass); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); z-index: 1000; }
+        .btn-back { width: 40px; height: 40px; background: var(--search-bg); color: var(--text-main); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; text-decoration: none; transition: transform 0.2s; cursor: pointer; }
+        .btn-back:active { transform: scale(0.9); }
+        .header-title { font-weight: 800; font-size: 18px; letter-spacing: -0.5px; }
+        .btn-tele { width: 40px; height: 40px; background: #29b6f6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; text-decoration: none; transition: transform 0.2s; }
+        .btn-tele:active { transform: scale(0.9); }
+
+        .app-header-detail { display: flex; gap: 15px; margin-bottom: 20px; align-items: center; }
+        .app-icon-detail { width: 90px; height: 90px; border-radius: 20px; object-fit: cover; box-shadow: var(--shadow); }
+        .app-meta-detail { flex: 1; }
+        .app-meta-detail h1 { font-size: 20px; font-weight: 800; line-height: 1.3; margin-bottom: 5px; color: var(--text-main); }
+        .app-dev-detail { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; }
+        .badge-mod { display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.15); color: var(--accent); padding: 2px 5px; border-radius: 8px; font-size: 11px; font-weight: 800; gap: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .ss-scroll { display: flex; gap: 15px; overflow-x: auto; scroll-snap-type: x mandatory; margin-bottom: 25px; padding-bottom: 10px; scrollbar-width: none; }
+        .ss-scroll::-webkit-scrollbar { display: none; }
+        .ss-img { height: 150px; border-radius: 16px; scroll-snap-align: center; object-fit: cover; box-shadow: var(--shadow); border: 1px solid var(--card-border); cursor: pointer; }
+
+        .section-title { font-size: 16px; font-weight: 800; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; color: var(--text-main); }
+        .section-title i { color: var(--primary); }
+
+        .desc-box { font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 25px; background: var(--bg-card); padding: 20px; border-radius: 16px; border: 1px solid var(--card-border); }
+        .desc-box p { margin-bottom: 10px; }
+        .desc-box p:last-child { margin-bottom: 0; }
+
+        .btn-download-huge { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; background: linear-gradient(135deg, var(--primary), #1d4ed8); padding: 18px; border-radius: 16px; color: white; text-decoration: none; font-weight: 800; font-size: 16px; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4); transition: transform 0.2s, box-shadow 0.2s; gap: 4px; }
+        .btn-download-huge:active { transform: scale(0.96); box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3); }
+        .btn-date { font-size: 11px; font-weight: 600; opacity: 0.85; margin-top: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .social-notice { background: var(--bg-card); border: 1px solid var(--card-border); border-radius: 16px; padding: 15px; margin-bottom: 25px; text-align: center; box-shadow: var(--shadow); }
+        .social-notice p { font-size: 13px; font-weight: 700; margin-bottom: 12px; color: var(--text-main); }
+        .social-links { display: flex; gap: 10px; justify-content: center; }
+        .btn-wa, .btn-tg { flex: 1; padding: 10px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; gap: 6px; color: white; transition: transform 0.2s; }
+        .btn-wa { background: #25D366; } .btn-tg { background: #2AABEE; }
+        .btn-wa:active, .btn-tg:active { transform: scale(0.95); }
+
+        .mini-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 25px; }
+        .btn-mini { background: var(--bg-card); color: var(--text-main); border: 1px solid var(--card-border); padding: 12px 5px; border-radius: 16px; font-size: 11px; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: transform 0.2s, background 0.2s; box-shadow: var(--shadow); text-decoration: none; }
+        .btn-mini:active { transform: scale(0.95); background: var(--search-bg); }
+        .btn-mini i { font-size: 18px; color: var(--primary); }
+
+        .mod-feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 25px; }
+        .mod-feat-card { background: var(--bg-card); padding: 12px 15px; border-radius: 16px; border: 1px solid var(--card-border); display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; color: var(--text-main); }
+        .mod-feat-card i { color: var(--accent); font-size: 16px; }
+
+        .lightbox { position: fixed; top: 0; left: 0; z-index: 10000; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; flex-direction: column; opacity: 0; transition: opacity 0.3s; display: none; }
+        .lightbox.show { display: flex; opacity: 1; }
+        .lightbox-content { max-width: 85vw; max-height: 80vh; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transform: scale(0.9); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .lightbox.show .lightbox-content { transform: scale(1); }
+        .close-lb { position: absolute; top: 20px; right: 20px; color: #fff; font-size: 24px; cursor: pointer; width: 40px; height: 40px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.2s; z-index: 10001; }
+        .close-lb:active { background: rgba(255,255,255,0.3); }
+        .prev-lb, .next-lb { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); width: 45px; height: 45px; color: white; font-size: 20px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 10001; transition: background 0.2s; }
+        .prev-lb { left: 10px; } .next-lb { right: 10px; }
+        .prev-lb:active, .next-lb:active { background: rgba(255,255,255,0.3); }
+    </style>
+</head>
+<body>
+    <div id="google_translate_element"></div>
+
+    <header>
+        <a href="javascript:history.back()" class="btn-back"><i class="fa-solid fa-angle-left"></i></a>
+        <div class="header-title">App Detail</div>
+        <a href="https://modorazone.net/telegram" class="btn-tele"><i class="fa-brands fa-telegram"></i></a>
+    </header>
+
+    <div id="mainView">
+        
+        <div class="ad-box">
+            <script> atOptions = { 'key' : '71b6ce9e93e1fc97dcb5d4dba0a995d8', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} }; </script>
+            <script src="https://www.highperformanceformat.com/71b6ce9e93e1fc97dcb5d4dba0a995d8/invoke.js"></script>
+        </div>
+
+        <div class="app-header-detail">
+            <img src="https://play-lh.googleusercontent.com/QcfhlXm32JDnj3WM2-TSL78ad99x4slovX4OzCSLSPU3uRN-mGXpKyM_yeXiewhz0Lk" class="app-icon-detail" alt="Icon">
+            <div class="app-meta-detail">
+                <h1>ibis Paint X MOD APK V14.0.4</h1>
+                <div class="app-dev-detail">ibis inc.</div>
+                <div class="badge-mod"><i class="fa-solid fa-screwdriver-wrench"></i> 100% MOD</div>
+            </div>
+        </div>        
+        
+        <div class="mini-actions">
+            <a href="javascript:void(0)" onclick="scrollToDownload(event)" class="btn-mini"><i class="fa-solid fa-download"></i><span>Download</span></a>
+            <a href="https://play.google.com/store/apps/details?id=jp.ne.ibis.ibispaintx.app" target="_blank" class="btn-mini"><i class="fa-brands fa-google-play"></i><span>Play Store</span></a>
+            <div class="btn-mini" onclick="shareApp()"><i class="fa-solid fa-share-nodes"></i><span>Bagikan</span></div>
+        </div>
+        
+        <div class="section-title"><i class="fa-solid fa-star"></i> Fitur MOD</div>
+        <div class="mod-feature-grid">
+            <div class="mod-feat-card"><i class="fa-solid fa-circle-check"></i> <span>New Update</span></div><div class="mod-feat-card"><i class="fa-solid fa-circle-check"></i> <span>Premium Unlocked</span></div><div class="mod-feat-card"><i class="fa-solid fa-circle-check"></i> <span>No Ads</span></div><div class="mod-feat-card"><i class="fa-solid fa-circle-check"></i> <span>Pro Features</span></div><div class="mod-feat-card"><i class="fa-solid fa-circle-check"></i> <span>Watermark Removed</span></div><div class="mod-feat-card"><i class="fa-solid fa-circle-check"></i> <span>High Quality Export</span></div><div class="mod-feat-card"><i class="fa-solid fa-circle-check"></i> <span>VIP Unlocked</span></div><div class="mod-feat-card"><i class="fa-solid fa-circle-check"></i> <span>Unlock All Features</span></div><div class="mod-feat-card"><i class="fa-solid fa-circle-check"></i> <span>No Login</span></div>
+        </div>
+        
+        <div class="section-title"><i class="fa-solid fa-images"></i> Screenshot</div>
+        <div class="ss-scroll">
+            <img src="https://play-lh.googleusercontent.com/uxUWUcTkIsw4L-37VK0CmXcQIPq6A44V1T_fN_W4poEo7JOKWiqwVee6CYy_vlFjWGmOKM9Iz_QEVwtBHe5XZw" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/VMhcKGZqF-5FSBOzr9okEHXsuBXD5Tyf2UzJB-to1di6KrUYVL83aVsEch24bBvDfCbVwTKNGkzoMZpWFjxwEw" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/5NCyKmLL3n9mDe0efr3vviEp5a6fGVSrSC7CM3Sj4LzL-PdgjCFYpnWn9ryvmb5J1VPKQQxdzRkm0xGuA4Hb" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/VZITfzXW6pVlWMf4iR1m3h_N9UpdaWkj-Zpnp9DobgX_crMgxVAwG2bvRpndOO0KGBHBlPpIO-snQT0S4tJdm-Q" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/U6N7tUGznLlQgpqZa21yUOdpInS34RLrMSxRrZ4cVVDBvUTH8jHIBAeW4-6v7fNovDObQYr6BQ6JvxCugCxCAQ" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/a7GHfHkLhTpzYtMuTEaJXBuEQCC3Q2ekQJpYkkI4wEzTp-FFTIxTIWDMAsx60c4Itf9zUQsqGKlpr6iPlAFQ" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/kHXhsrWUZJ454aO8lfUxkUl443XHb108mQ9ibHzSOD1ECActxjVERQu__GKW7smE4fjlxp2-e15V3PGMjt4c3Q" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/1Pb-jN1sjx7BxHW636A2oGRxlPXESRWiFyIu-Pe7U7QLcrHU_CuwBoD0BYur2HsnSwNhvAN83L76wpmW-E-RJg" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/d1b_dTrW8nPGpoT5wRYkzjcuw6HMnsY1HiXsDGf3gRpcdhjKl4ENtA--zkftyGwDMw" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/MgDIGwkjv1Nd0PjjIsoRnkcK8i6uaa2H4g50wPHVgD6QBomVt3h6clBtqvJaenKmjA" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/HLXCwBZOsoVVllSHB74iuVpbFfDR7mlhSOy9EfDIzFbzHQJvWSwHBqh8oUlJZcD7ekuY" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/iFxryWQhgjflrb-OvQWwNkQnXcJffuSUf86LJKDxOqOoepMGVyriVm2K1Y2dTWxYmw" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/n9Z0Tx1_3xEsRdO-RrPWJe5LFPshi-joyyKrWdG-xRpGCiLIo99Q09BIULxxLssFZA" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/Jccna8pMpbgrW6WbdPe0X0H3W2I0ay2zY82OTJOH2dn6ltqZkMImaqCBZsY6UCewvoMUonnGZ_ddfy8nqa2yFg" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/RO4RyT9bvh8iz7D6H5I3F-eWwVoOhtsKHAvuKk3SBy8LMQESPzerVR8MhXyxHTi-mwXVMizw0qb6PFjsJzYC5w" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/MPRqMv0X-VMSz8FufbjRTTinZEH6OYw0OtYP2S7SprlkUpmES6HVKiqAfTrlvt-ICUrzQPaA2A-PRDj_oxofW6s" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/unTXRsHNQbySQBNs0erQzsEo8WdTxRpRFhmuF6EFXqUlmt3wK8CizU-TZl_u_habvoBey4GzFv7CTRGnNCDtfA" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/8Iq_uL0OqTSqFkeq0NH1Qg6unZFrzG2Ni_gQUSMNEuzbTJR7CsD_V6ofoUXrWDmsvZhZD1FQLwPxf1_QlxYz8yI" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/avJymdArTSqlKR_U-eff0SFeCoVCp0yKl1dtmeKYCI-qHo_B1j6gCRPLQftSiBbrqnNxaGWUdDwimelkukHPU70" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/dtGM5IqZiPAve47i2hlTQPqpv_04_Mea6Ahb5mQSi0E68__8-YzrxTRpRfVPiU-YdxR2yhbv58f7xQVfVjEx" class="ss-img" alt="MODORA Official" loading="lazy">
+                            <img src="https://play-lh.googleusercontent.com/GoOU3VtSJjvPHcw2ugLHh6G1TQ-MSm8K3vr0O31UwrPiJ9BykDxWhXjBVczgpEdgexO_bPeFzUJ5jtWTKqcWHw" class="ss-img" alt="MODORA Official" loading="lazy">
+                            
+        </div>        
+
+        <div class="ad-box">
+            <script> atOptions = { 'key' : '1fab8d804463024e9956dcff62e2dcf5', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} }; </script>
+            <script src="https://www.highperformanceformat.com/1fab8d804463024e9956dcff62e2dcf5/invoke.js"></script>
+        </div>        
+
+        <div class="section-title"><i class="fa-solid fa-circle-info"></i> Deskripsi</div>
+        <div class="desc-box">
+            <p>ibis Paint X adalah aplikasi menggambar populer dan serbaguna yang diunduh lebih dari 500 juta kali secara total dalam satu rangkaian, yang menyediakan lebih dari 47000 kuas, lebih dari 27000 bahan, lebih dari 2100 font, 84 filter, 46 nada layar, 27 mode campuran, merekam proses menggambar, goresan fitur stabilisasi, berbagai fitur penggaris seperti penggaris garis radial atau penggaris simetri, dan fitur clipping mask, alat vektor, fungsi animasi, gangguan pembelajaran AI, dll Dilengkapi Fungsi profesional!</p>
+                        
+                        <p>*YouTube channel</p>
+                        <p>Banyak video tutorial di ibis Paint di-upload ke YouTube channel.</p>
+                        <p>Berlangganan!</p>
+                        <p>https://youtube.com/ibisPaint</p>
+                        
+                        <p>*Konsep/fitur</p>
+                        <p>- Sangat fungsional dan fitur profesional melebihi bahwa desktop menggambar apps.</p>
+                        <p>- Halus dan nyaman gambar pengalaman yang direalisasikan oleh teknologi OpenGL.</p>
+                        <p>- Merekam proses Menggambar Anda sebagai video.</p>
+                        <p>- SNS fitur di mana Anda dapat mempelajari teknik-teknik menggambar dari pengguna lain gambar proses video.</p>
+                        
+                        <p>*Fitur</p>
+                        <p>ibis Paint memiliki fungsi tinggi sebagai aplikasi menggambar bersama dengan fitur berbagi gambar proses dengan pengguna lain.</p>
+                        
+                        <p>[Sikat fitur]</p>
+                        <p>- Menggambar halus pada hingga 60 fps.</p>
+                        <p>- Lebih dari 47000 jenis sikat termasuk dip pena, merasa ujung pena, pena digital, udara kuas, penggemar kuas, datar kuas, pensil, minyak kuas, sikat arang, krayon dan perangko.</p>
+                        
+                        <p>[Lapisan fitur]</p>
+                        <p>- Anda dapat menambahkan lapisan sebanyak yang Anda butuhkan tanpa batas.</p>
+                        <p>- Parameter lapisan yang dapat diatur untuk masing-masing lapisan individual seperti lapisan opacity, alpha blending, menambah, mengurangi dan mengalikan.</p>
+                        <p>- Fitur berguna kliping gambar kliping, dll.</p>
+                        <p>- Berbagai lapisan perintah seperti duplikasi lapisan, impor dari perpustakaan foto, inversi horisontal, vertikal inversi, rotasi lapisan, lapisan bergerak, dan zoom in/out.</p>
+                        
+                        <p>*Tentang paket pembelian ibis Paint</p>
+                        <p>Paket pembelian berikut tersedia untuk ibis Paint:</p>
+                        <p>- ibis Paint X (versi gratis)</p>
+                        <p>- ibis Paint (versi berbayar)</p>
+                        <p>- Upgrade Penghapusan Iklan</p>
+                        <p>- Keanggotaan Premium (Paket bulanan / Paket tahunan)</p>
+                        <p>Tidak ada perbedaan fitur selain ada tidaknya iklan untuk versi berbayar dan versi gratis.</p>
+                        <p>Jika Anda membeli Upgrade Penghapusan Iklan, iklan tidak akan ditampilkan dan tidak akan ada perbedaan dengan ibis Paint versi berbayar.</p>
+                        <p>Untuk menggunakan fungsi yang lebih canggih, kontrak Keanggotaan Premium (Paket Bulanan / Paket Tahunan) berikut diperlukan.</p>
+                        
+                        <p>[Keanggotaan Premium]</p>
+                        <p>Anggota Premium dapat menggunakan fitur Premium. Hanya untuk waktu awal Anda dapat menggunakan 7 hari atau uji coba gratis 30 hari. Keanggotaan Premium memberi Anda hak atas fitur-fitur berikut.</p>
+                        <p>- Kapasitas penyimpanan awan 20 GB</p>
+                        <p>- Material Premium</p>
+                        <p>- Kertas kanvas Premium(*1)</p>
+                        <p>- Font Premium</p>
+                        <p>- Filter Kurva Corak</p>
+                        <p>- Filter Peta Gradasi</p>
+                        <p>- Filter Penyesuaian Tingkat</p>
+                        <p>- Alat-alat vektor</p>
+                        <p>- Lapisan penyesuaian Premium</p>
+                        <p>- lukis di sekelilingnya, hapus di sekelilingnya</p>
+                        <p>- Hambatan pembelajaran AI</p>
+                        <p>- Folder fungsi karya seni</p>
+                        <p>- Memimpor pola kuas asli</p>
+                        <p>- Tidak ada iklan di layar</p>
+                        <p>- Ditambah lagi dengan banyak fitur lain yang eksklusif untuk Keanggotaan Premium!</p>
+                        <p>(*1) Anda dapat mencoba secara gratis hingga 1 jam per hari.</p>
+                        <p>* Setelah Anda menjadi Keanggotaan Premium dengan uji coba gratis, biaya pembaruan akan dikenakan secara otomatis kecuali Anda membatalkan Keanggotaan Premium Anda setidaknya 24 jam sebelum akhir periode uji coba gratis.</p>
+                        <p>* Kami akan menambahkan fitur-fitur premium di masa mendatang, silahkan melihat keluar untuk mereka.</p>
+                        
+                        <p>*Pada pengumpulan Data</p>
+                        <p>- Hanya bila Anda menggunakan atau akan menggunakan SonarPen, aplikasi mengumpulkan sinyal audio dari mikrofon. Data yang dikumpulkan hanya digunakan untuk komunikasi dengan SonarPen, dan tidak pernah disimpan maupun dikirim ke mana saja.</p>
+                        
+                        <p>*Pertanyaan dan dukungan</p>
+                        <p>Pertanyaan dan laporan bug di ulasan akan tidak dapat menjawab, jadi silakan hubungi dukungan ibis cat.</p>
+                        <p>https://ssl.ibis.ne.jp/en/support/Entry?svid=25</p>
+                        
+                        <p>*Persyaratan layanan ibisPaint</p>
+                        <p>https://ibispaint.com/agreement.jsp</p>
+        </div>
+
+        <div class="ad-box">
+            <script> atOptions = { 'key' : '64de5ec90b53769f0d08246a768daf41', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script>
+            <script src="https://www.highperformanceformat.com/64de5ec90b53769f0d08246a768daf41/invoke.js"></script>
+        </div>
+
+        <div class="social-notice">
+            <p>Komunitas Modora Official</p>
+            <div class="social-links">
+                <a href="https://modorazone.net/telegram" class="btn-tg"><i class="fa-brands fa-telegram"></i> Join Telegram</a>
+            </div>
+        </div>
+
+        <div class="ad-box">
+            <script async="async" data-cfasync="false" src="https://pl29691905.effectivecpmnetwork.com/ed84ce1e1a3585bd590fc6746c9fbeac/invoke.js"></script>
+            <div id="container-ed84ce1e1a3585bd590fc6746c9fbeac"></div>
+        </div>
+
+        <div class="section-title" id="download-section" style="margin-top: 15px;"><i class="fa-solid fa-cloud-arrow-down"></i> Area Download</div>
+        
+        
+                <div id="dl-wrap-0" style="margin-bottom: 12px;">
+                    <div id="dl-loading-0" style="background: var(--bg-card, #1e293b); border: 1px solid var(--card-border, #334155); border-radius: 16px; padding: 25px 20px; text-align: center; color: var(--text-main, #f8fafc); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 28px; color: var(--primary, #2563eb);"></i>
+                        <span style="font-size: 14px; font-weight: 700;">Mempersiapkan Link... <span id="dl-count-0" style="color: var(--primary, #2563eb); font-size: 18px; font-weight: 800;">10</span>s</span>
+                        <div style="width: 100%; height: 6px; background: rgba(0,0,0,0.5); border-radius: 10px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);">
+                            <div id="dl-progress-0" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--primary, #2563eb), var(--accent, #10b981)); transition: width 1s linear; border-radius: 10px;"></div>
+                        </div>
+                    </div>
+                    <a href="https://app.apkmb.com/ibis%20Paint%20X/ibis%20Paint%20X%20v14.0.4%20-%20Premium.apk" class="btn-download-huge" id="dl-btn-0" style="display: none; animation: appEntry 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
+                        <div><span>DOWNLOAD (90 MB)</span></div>
+                        <div class="btn-date">Update: 10 Juni 2026</div>
+                    </a>
+                    <script>
+                        setTimeout(() => {
+                            let timeLeft = 10;
+                            let loadingEl = document.getElementById('dl-loading-0');
+                            let btnEl = document.getElementById('dl-btn-0');
+                            let countEl = document.getElementById('dl-count-0');
+                            let progressEl = document.getElementById('dl-progress-0');
+                            
+                            let dlTimer = setInterval(() => {
+                                timeLeft--;
+                                let pct = ((10 - timeLeft) / 10) * 100;
+                                if(progressEl) progressEl.style.width = pct + '%';
+                                
+                                if(timeLeft > 0) {
+                                    if(countEl) countEl.innerText = timeLeft;
+                                } else {
+                                    clearInterval(dlTimer);
+                                    if(loadingEl) loadingEl.style.display = 'none';
+                                    if(btnEl) btnEl.style.display = 'flex';
+                                }
+                            }, 1000);
+                            setTimeout(() => { if(progressEl) progressEl.style.width = '10%'; }, 50);
+                        }, 100);
+                    </script>
+                </div>
+        
+        <div class="social-notice">
+            <p>Komunitas Modora Official</p>
+            <div class="social-links">
+                <a href="https://modorazone.net/telegram" class="btn-tg"><i class="fa-brands fa-telegram"></i> Join Telegram</a>
+            </div>
+        </div>
+        
+        <div class="ad-box">
+            <script> atOptions = { 'key' : 'c2d4ebdf1ad8056e518866927fd80ff2', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script>
+            <script src="https://www.highperformanceformat.com/c2d4ebdf1ad8056e518866927fd80ff2/invoke.js"></script>
+        </div>
+        
+        <script src="../../../../../view.js" type="module"></script>
+
+        <div style="height: 60px;"></div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <div class="close-lb"><i class="fa-solid fa-xmark"></i></div>
+        <div class="prev-lb"><i class="fa-solid fa-angle-left"></i></div>
+        <img class="lightbox-content" id="img-lb" src="">
+        <div class="next-lb"><i class="fa-solid fa-angle-right"></i></div>
+    </div>
+
+    <script>
+        function scrollToDownload(e) {
+            if(e) e.preventDefault();
+            const section = document.getElementById('download-section');
+            if(section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const lb = document.getElementById('lightbox');
+            const lbImg = document.getElementById('img-lb');
+            const images = document.querySelectorAll('.ss-img');
+            let currentIndex = 0;
+
+            images.forEach((img, index) => {
+                img.addEventListener('click', () => {
+                    lb.classList.add('show');
+                    lbImg.src = img.src;
+                    currentIndex = index;
+                });
+            });
+
+            document.querySelector('.close-lb').onclick = () => lb.classList.remove('show');
+            
+            document.querySelector('.prev-lb').onclick = (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+                lbImg.src = images[currentIndex].src;
+            };
+            
+            document.querySelector('.next-lb').onclick = (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+                lbImg.src = images[currentIndex].src;
+            };
+            
+            lb.onclick = (e) => { 
+                if(e.target === lb) lb.classList.remove('show'); 
+            };
+        });
+
+        function shareApp() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'ibis Paint X MOD APK V14.0.4',
+                    text: 'Download ibis Paint X MOD APK V14.0.4 MOD APK terbaru dari MODORA Official!',
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link disalin ke clipboard!');
+            }
+        }
+
+        function showAdblockWarning() {
+            var style = document.createElement('style');
+            style.innerHTML = "#modoraAdblockOverlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 999999; font-family: 'Plus Jakarta Sans', sans-serif; text-align: center; color: #f8fafc; animation: modoraFadeIn 0.3s ease-out; } @keyframes modoraFadeIn { from { opacity: 0; } to { opacity: 1; } } .modora-premium-card { background: #1e293b; border-radius: 24px; width: 100%; max-width: 400px; padding: 40px 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 1px solid #334155; transform: scale(0.9); animation: modoraCardScale 0.4s 0.1s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275); opacity: 0; } @keyframes modoraCardScale { to { transform: scale(1); opacity: 1; } } .modora-icon-header { width: 64px; height: 64px; background: rgba(239, 68, 68, 0.15); color: #ef4444; font-size: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; box-shadow: 0 8px 20px rgba(239, 68, 68, 0.2); } .modora-title { font-size: 22px; font-weight: 800; margin-bottom: 10px; } .modora-desc { font-size: 14px; color: #94a3b8; line-height: 1.5; margin-bottom: 25px; } .modora-highlight { color: #ef4444; font-weight: 700; } .modora-action-card { background: #ef4444; color: white; border: none; border-radius: 16px; padding: 16px; font-weight: 700; font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; transition: transform 0.2s, background 0.2s; } .modora-action-card:hover { background: #dc2626; } .modora-action-card:active { transform: scale(0.95); }";
+            document.head.appendChild(style);
+
+            var overlay = document.createElement('div');
+            overlay.id = 'modoraAdblockOverlay';
+            overlay.innerHTML = '<div class="modora-premium-card"><div class="modora-icon-header"><i class="fa-solid fa-shield-virus"></i></div><h2 class="modora-title">Pemblokir Iklan Aktif</h2><p class="modora-desc">Situs ini berjalan berkat dukungan iklan. Mohon <span class="modora-highlight">matikan Adblock</span> Anda untuk melanjutkan download.</p><button class="modora-action-card" onclick="location.reload()"><i class="fa-solid fa-rotate-right"></i> Saya sudah mematikan Adblock</button></div>';
+            document.body.appendChild(overlay);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function checkAdBlock() {
+            var script = document.createElement('script');
+            script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+            script.onerror = function() { showAdblockWarning(); };
+            script.onload = function() {
+                var ad = document.createElement('div');
+                ad.innerHTML = '&nbsp;';
+                ad.className = 'adsbox ad-placement doubleclick ad-banner banner-ads sponsor-ad';
+                ad.style.cssText = 'display:block; position:absolute; top:-9999px; left:-9999px; height:10px; width:10px;';
+                document.body.appendChild(ad);
+                setTimeout(function() {
+                    var styles = window.getComputedStyle(ad);
+                    if (ad.offsetHeight === 0 || styles.display === 'none' || styles.visibility === 'hidden') {
+                        showAdblockWarning();
+                    }
+                    ad.remove();
+                }, 250);
+            };
+            document.head.appendChild(script);
+        }
+        
+        setTimeout(checkAdBlock, 1500);
+    </script>
+    <script src="https://pl29691906.effectivecpmnetwork.com/39/52/84/395284c5585d8a90e1ab9d3f3da53eb6.js"></script>
+</body>
+</html>
